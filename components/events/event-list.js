@@ -1,4 +1,5 @@
 import EventItem from "./event-item";
+
 export default function EventList(props){
     const events = props.events;
     return(
@@ -6,6 +7,7 @@ export default function EventList(props){
             {events.map((event)=>{
                 return(
                  <EventItem
+                   key={event.id}
                    id={event.id}
                    title={event.title}
                    location={event.location}
